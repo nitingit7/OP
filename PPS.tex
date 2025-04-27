@@ -2,10 +2,10 @@
 \usetheme{Szeged}
 \usecolortheme{beaver}
 \usepackage{graphicx} % Required for inserting images
-\usepackage{lettrine}
+%\usepackage{lettrine}  % For making first letter big in sentence using \lettrine{T}{}
 \usepackage{multicol}
 
-\setbeamertemplate{navigation symbol}{}
+\setbeamertemplate{navigation symbols}{}
 \usefonttheme{structurebold}
 \renewcommand{\thefootnote}{\arabic{footnote}} % Reset footnote marker to numbers (optional)
 
@@ -24,10 +24,10 @@
     \end{center}
     \end{frame}
 
-\begin{frame}{Radiation From Mobile Towers}
+    \begin{frame}{Radiation From Mobile Towers}
     \begin{columns}
-        \column{0.48\textwidth} This is the First Columns\\
-        \textbf{Structure}\\
+        \column{0.48\textwidth} This is the text to be here\\
+        \textbf{Structure:}\\
         \begin{itemize}
             \item \textbf{Introduction}
             \item \textbf{Main Content of 3-4 topics in there}
@@ -36,9 +36,9 @@
             \item \textbf{References}
         \end{itemize}\\
         \vspace{0.1cm}
-        \column{0.48\textwidth} this is the second columns\\
+        \column{0.48\textwidth} this is the second columns
     \end{columns}
-\end{frame}
+    \end{frame}
 
 
 \begin{frame}{Frame Title}
@@ -74,7 +74,8 @@
 \begin{frame}{Next Frame Name}
     \begin{columns}
         \column{0.48\textwidth} 
-        \begin{block}[Name Here] This is the block that contains the block specials\\
+        \begin{block}{Name Here} 
+            This is the block that contains the block specials\\
         \end{block}
         
             \begin{align*}
