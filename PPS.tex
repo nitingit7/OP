@@ -1,0 +1,92 @@
+\documentclass[7pt, aspectratio=169]{beamer}
+\usetheme{Szeged}
+\usecolortheme{beaver}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{lettrine}
+\usepackage{multicol}
+
+\setbeamertemplate{navigation symbol}{}
+\usefonttheme{structurebold}
+\renewcommand{\thefootnote}{\arabic{footnote}} % Reset footnote marker to numbers (optional)
+
+\title{Practical Name}
+\author{\textbf{ajdg d} \inst{1} \and \textbf{esotg s} \inst{2}}
+\date{April 2025}
+\institute{
+\inst{1} Department of physics
+}
+
+\begin{document}
+    \begin{frame}
+    \titlepage
+    \begin{center}
+        \includegraphics[width=0.2\textwidth]{pics/Shivaji College Delhi University.jpeg}
+    \end{center}
+    \end{frame}
+
+\begin{frame}{Radiation From Mobile Towers}
+    \begin{columns}
+        \column{0.48\textwidth} This is the First Columns\\
+        \vspace{0.1cm}
+        \column{0.48\textwidth} this is the second columns\\
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Frame Title}
+    \begin{columns}
+    \column{0.48\textwidth} The evaluation of electric field intensity adjacent to mobile telephone base stations is determined by power transmitted from the antenna as well as the distance from the source. Theoretically, the relationship governing effective radiated power-ERP, distance (ERP), and electric field \((E_0)\) is expressed as \cite{roe2012probability}
+    \[
+        \frac{P}{4 \pi r^2} = \frac{E_0^2 \epsilon_0 c}{2}
+    \]
+        This implies to:
+
+    \column{0.48\textwidth}
+    \[
+        E_0 = \sqrt{\frac{P}{2 \pi r^2 \epsilon_0 c}}
+    \]
+    Where:
+    \begin{itemize}
+        \item \(P\) is the transmitted power, \cite{roe2012probability}
+        \item \( \epsilon_0 \) is the permittivity of free space,
+        \item \(c\) is the speed of light,
+        \item \(r\) is the distance from the antenna.
+    \end{itemize}
+
+    \[\rho = 3.145 \times 10^{12}\]
+
+    For practical calculations, the equation is further approximated with:
+    \[
+        E_0 = \frac{7.746 \sqrt{P}}{r}
+    \]
+    \end{columns}
+
+\end{frame}
+
+\begin{frame}{Next Frame Name}
+    \begin{columns}
+        \column{0.48\textwidth} 
+        \begin{block}[Name Here] This is the block that contains the block specials\\
+        \end{block}
+        
+            \begin{align*}
+            SAR &= \frac{d}{dt}\left(\frac{dw}{dm}\right) \\
+            \end{align*}
+
+        \column{0.48\textwidth}
+        
+        \begin{example} This is the example of the example block
+        \end{example}
+        
+            \begin{align*}
+            &= \frac{d}{dt}\left(\frac{dw}{\rho \, dV}\right) \\
+            &= \frac{\sigma \, E_i^2}{\rho}
+        \end{align*}
+        
+    \end{columns}
+\end{frame}
+
+\bibliographystyle{plain}
+\bibliography{Bibliography/MyBib}
+
+\end{document}
