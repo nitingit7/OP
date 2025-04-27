@@ -1,0 +1,463 @@
+\documentclass[7pt, aspectratio=169]{beamer}
+\usetheme{Szeged}
+\usecolortheme{beaver}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{lettrine}
+\usepackage{multicol} % For two-column layout
+\usepackage{amsmath}
+\usepackage{array} % For better table formatting
+\usepackage{biblatex}
+\addbibresource{Bibliography/MyBib.bib} % Instead of \bibliography
+\usefonttheme{structurebold}
+
+\renewcommand{\thefootnote}{\arabic{footnote}} % Reset footnote marker to numbers (optional)
+
+%\definecolor{mycolor}{RGB}{0, 128, 255}
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm] % To print the PDF
+
+\setbeamertemplate{navigation symbols}{} % Disabling the navigation of Beamer Template
+
+\title{Radiation Emissions from Mobile Phone Towers: Analyzing Health Effect}
+\author{\textbf{Nitin (22/19028)} \inst{1} \and \textbf{Narendra (22/19026)} \inst{1} \and \textbf{Yash (22/19049)} \inst{1}\\ \and \textbf{Pooja (22/19029)} \inst{1}}
+%\author{\textbf{Nitin Kumar} \inst{1} \and \textbf{Yash Chotiya} \inst{1} \and \textbf{Pooja Yadav} \inst{1} \and \textbf{Narendra} \inst{1}}
+\institute{
+  \inst{1} Department of Physics, Shivaji College Delhi University
+}
+\date{March 2025}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+  \begin{center}
+        \includegraphics[width=0.3\textwidth]{Pics/Shivaji Logo.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Introduction}
+\begin{columns}
+    \column{0.48\textwidth} \lettrine{T}{} he exponential growth of mobile communication technology has reshaped our daily lives, enabling instant connectivity and fostering economic development.\\
+    \vspace{0.1cm}
+    Mobile telephony towers as major components of this infrastructure play a crucial role in ensuring eternal coverage of service. But the rapid explosion of the towers has aroused many concerns with regard to the health of the people and their environment.
+    \column{0.48\textwidth} The radiation associated with mobile towers is mostly negative-ionizing radiation, having no energy to disturb atomic structure, whereas ionizing radiation\footnote{It is a type of energy released by atoms that travels in the form of electromagnetic waves (gamma or X-rays) or particles (neutrons, beta or alpha)} does.\\
+    \vspace{0.1cm}
+    Nevertheless, non-ionizing radiation is usually considered less harmful, and now research is on to assess biological and ecological impacts following prolonged exposure.
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Electric Field Around Mobile Phone Base Stations}
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Pics/Radiation around tower.png}
+\end{center}
+    
+\end{frame}
+
+\begin{frame}{Electric Field Around Mobile Phone Base Stations}
+
+% \begin{center}
+%     \includegraphics[width=0.8\textwidth]{Pics/Count of How far is your residence_workplace from the nearest mobile phone tower_.png}
+% \end{center}
+\begin{columns}
+    \column{0.48\textwidth} The evaluation of electric field intensity adjacent to mobile telephone base stations is determined by power transmitted from the antenna as well as the distance from the source. Theoretically, the relationship governing effective radiated power-ERP, distance (ERP), and electric field \((E_0)\) is expressed as\autocite{kumar2011effect}:
+    \[
+        \frac{P}{4 \pi r^2} = \frac{E_0^2 \epsilon_0 c}{2}
+    \]
+        This implies to:
+
+    \column{0.48\textwidth}
+    \[
+        E_0 = \sqrt{\frac{P}{2 \pi r^2 \epsilon_0 c}}
+    \]
+    Where:
+    \begin{itemize}
+        \item \(P\) is the transmitted power,
+        \item \( \epsilon_0 \) is the permittivity of free space,
+        \item \(c\) is the speed of light,
+        \item \(r\) is the distance from the antenna.
+    \end{itemize}
+
+    For practical calculations, the equation is further approximated with:
+    \[
+        E_0 = \frac{7.746 \sqrt{P}}{r}
+    \]
+
+\end{columns}
+
+% \begin{equation}
+% X \phi(x) = -\left(\frac{ia^2}{\hbar}\right) P_x \phi(x)
+% \end{equation}
+
+% \begin{equation}
+% \frac{2Ah^2}{ma^4} - \frac{1}{2}kA = 0
+% \end{equation}
+    
+\end{frame}
+\begin{frame}{Electric Field Around Mobile Phone Base Stations}
+\begin{columns}
+    \column{0.48\textwidth}
+    The electric field \((E_0)\) is inversely proportional to the distance \((r)\) . Thus, the exposure decreases drastically with the increase in the distance from the source. For, example, if \(ERP\) for the transmitting antenna is to be 50 W, expression for its electric field can be given at a distance \(r\) as follows:
+    \[
+        E_0 = \frac{54.76}{r} \, \text{V/m}
+    \]
+    
+    \column{0.48\textwidth}
+    \begin{block}{ERP}
+    The Effective Radiated Power \((ERP)\) of a transmitting antenna is a measure of the power radiated in a specific direction.
+    \end{block}
+    This relation indicate to maintain a distance from mobile tower antennas to minimize the exposure of radiation. The field intensity decreases rapidly with distance-in accordance with the inverse-square law.
+
+    
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Specific Absorption Rate (SAR)}
+\begin{center}
+    \includegraphics[width=0.515\textwidth]{Pics/Sar illustration.jpg}
+    \includegraphics[width=0.35\textwidth]{Pics/Saar illustration2.jpeg}
+\end{center}
+    
+\end{frame}
+
+\begin{frame}{Specific Absorption Rate (SAR)}
+\begin{columns}
+    \column{0.48\textwidth}
+    The specific absorption rate (SAR) gives an idea of the rate of absorption of electromagnetic energy by the human body. It is defined as the time derivative of the incremental energy \((dw)\) absorbed or dissipated per unit mass \((dm)\) in a volume element \((dv)\) of given density 
+\((\rho)\) . In terms of mathematical expression, SAR can be defined as\autocite{kumar2011effect}:
+    \begin{align*}
+    SAR &= \frac{d}{dt}\left(\frac{dw}{dm}\right) \\
+    \end{align*}
+
+    \column{0.48\textwidth}
+    \begin{align*}
+        &= \frac{d}{dt}\left(\frac{dw}{\rho \, dV}\right) \\
+        &= \frac{\sigma \, E_i^2}{\rho}
+    \end{align*}
+    Where:
+    \begin{itemize}
+        \item \(E_i\) represents the electric field inside the material,
+        \item \(\sigma\) is the conductivity of the tissue,
+        \item \(\rho\) is the conductivity of the tissue.
+    \end{itemize}
+
+    
+\end{columns}
+    
+\end{frame}
+\begin{frame}{Specific Absorption Rate (SAR)}
+\begin{columns}
+    \column{0.48\textwidth}
+    The SAR gauges the biological tissue's ability to absorb electromagnetic energy and convert it into heat, this process occurring via various established mechanisms,\\
+    \vspace{0.1cm}
+    especially those in which the efficiency of conversion relies upon the strength of the internal electric field. SAR is of great importance in measuring the biological effects of electromagnetic radiation, especially in the case of RF exposure.
+
+
+    \column{0.48\textwidth}
+    The densities of the different tissues, e.g., fat, and skeletal muscle, decide the SAR values. For example, a tissue with a very high conductivity and low density tends to absorb more energy and hence exhibits a high SAR. The SAR is associated with thermal effects, such as the heating of tissues; however, it also indicates the presence of some non-thermal interactions, such as ELF mode of radio waves\footnote{Extremely Low Frequency (ELF) radio waves, with frequencies between 3 and 30 Hz.}.
+    
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Radiation Levels Near Cell Towers}
+\begin{center}
+    \includegraphics[width=0.95\textwidth]{Pics/Tower Radiation.png}
+\end{center}
+    
+\end{frame}
+\begin{frame}{Radiation Levels Near Cell Towers}
+\begin{columns}
+    \column{0.48\textwidth}
+    Near cell towers, radiation was measured via a broadband monopole antenna of 2 dB gain utilizing a spectrum analyzer at various distances (from 50 to 150 meters),\\
+    \vspace{0.1cm}
+    heights, angles with respect to the towers, and indoors and outdoors. The power levels were documented for subsequent frequencies of CDMA, GSM900, and GSM1800 towers. In the vicinity of windows within buildings, the range of power\autocite{kumar2009biological}
+    
+    \column{0.48\textwidth}
+    \begin{block}{Monopole Antenna}
+        generally consists of a thin vertical wire mounted over the ground plane, whose bandwidth increases with an increase in its diameter
+    \end{block}
+     levels observed at 50 meters varied from -20 to -30 dBm. At distances between 100 to 150 meters, the propagating power levels varied from -30 to -50 dBm in the 800, 900, and 1800 MHz bands. Such measurements conform to theoretical calculations.
+
+    
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Radiation Levels Near Cell Towers}
+\begin{columns}
+    \column{0.48\textwidth}
+    The receive power \(P_r\) at the distance \(R\) is given by\autocite{kumar2009biological}:
+    \begin{align*}
+        P_r = \frac{P_t \times G_t \times G_r \times \lambda^2}{(4\pi R)^2}
+    \end{align*}
+    At 20 W transmitter power \((P_t)\) , the gain (\(G_t\) \(\&\) \(G_r\)) of the antenna being 10 dB \(\&\) 2 dB, the magnitude of received power at 50 meters would be:
+        \begin{itemize}
+        \item -10.2 dBm at 887 MHz,
+        \item -10.8 dBm at 945 MHz,
+        \item -16.7 dBm at 1872 MHz.
+    \end{itemize}
+    
+    \column{0.48\textwidth}
+    Thus, the concrete walls do provide some cash value towards attenuation, and the buildings outside the main beam of radiation were confirmed to have observed lower power levels than theoretically predicted.\\
+    \vspace{0.2cm}
+    A mobile tower is typically operates from -80 to -100 dBm. Under the 50 meter the measured power is higher which is expected since the tower is designed to cover the several kilometers, which making it to operate on longer distances
+\end{columns}
+    
+\end{frame}
+\begin{frame}{Radiation Levels Near Cell Towers}
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{Pics/Count of How far is your residence_workplace from the nearest mobile phone tower_.png}\\
+    \end{center}
+    
+\end{frame}
+\begin{frame}{Radiation Levels Near Cell Towers}
+\begin{columns}
+    \column{0.48\textwidth}
+    The research questioned the proximity of homes and offices to the closest mobile towers which range from the below:
+    \begin{itemize}
+        \item \textbf{People uncertain:} 9.1 Unaware of the distance from the nearest tower.
+        \item \textbf{Beyond 500 meters:} 36.4\(\%\) are more than 500 m away from the nearest tower.
+        \item \textbf{100-500 meters:} 18.2\(\%\) are located within 100 and 500 meters of the nearest tower.
+    \end{itemize}
+
+    
+    \column{0.48\textwidth}
+    \begin{itemize}
+        \item \textbf{Less than 100 meters:} From among the respondents, 36.4\(\%\) were within 100 meters of the tower.
+    \end{itemize}
+    The results show that a very significant proportion of the population, 54.6\(\%\) either lives or works within a 500-meter radius of a mobile tower with 36.4\(\%\) being within 100 meters.\\
+    \vspace{0.1cm}
+    Such close distances raise serious concerns of continued exposure to electromagnetic radiations, especially in the case of persons within 100 meters, where radiation levels are considerably higher.
+
+    
+\end{columns}
+    
+\end{frame}
+\begin{frame}{Health Impacts of Mobile Tower Radiation}
+\begin{center}
+    \includegraphics[width=0.39\textwidth]{Pics/Human body heat map.png}
+    \includegraphics[width=0.2\textwidth]{Pics/Human water content.png}
+    \includegraphics[width=0.32\textwidth]{Pics/Human body nervous sysem.jpeg}
+\end{center}
+    
+\end{frame}
+\begin{frame}{Health Impacts of Mobile Tower Radiation}
+\begin{columns}
+    \column{0.48\textwidth}
+    Health problems such as boils, dryness around the eyes, joint pains, and discomfort in the brain, heart, and abdomen are caused due to exposure to electromagnetic radiation (EMR) from mobile towers.\\
+    \vspace{0.1cm}
+    The body absorbs the radiation when it comes into contact with the EMR causing localized heating and internal multiple resonances due to the body being a size around the wavelength of radiation. Thermal effects are the only primary focus in current international safety standards.\autocite{kumar2009biological}
+
+    
+    \column{0.48\textwidth}
+    \begin{block}{Localize Heating}
+    Localized systems provide heat or cooling only to specific zones or areas within buildings rather than heating the entire building which can result in lower energy consumption and cost savings\\
+    \end{block}
+     Available research revealed that there is also non-thermal that cause the same, or probably worse, effects after years of exposure: Long duration (8-10 years) can lead to the following results of serious health complications:
+
+    
+\end{columns}
+    
+\end{frame}
+\begin{frame}{Health Impacts of Mobile Tower Radiation}
+\begin{columns}
+    \column{0.48\textwidth}
+    \begin{itemize}
+        \item \textbf{Neurological disorders:} Headaches, forgetfulness, sleep disruption, and depression.
+        \item \textbf{Reproductive health:} Less effective sperm maturation and motility in the males.
+        \item \textbf{Cancer:} An increased risk of brain tumors and various other malignancies.
+    \end{itemize}
+    \column{0.48\textwidth}
+    \begin{block}{Non-Thermal Effects:}
+        Even at low levels of radiation, the chronic exposure can affect the DNA, increasing the formation of free radicals and inducing stress at the cellular level.
+    \end{block}
+    \begin{block}{Sensitive groups:}
+        Children, pregnant women, and the elderly are prone to a higher risk because of underdeveloped immune systems and developing tissues.
+    \end{block}
+
+    
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Health Impacts of Mobile Tower Radiation}
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{Pics/Count of Do you believe your health issues are linked to the proximity of mobile phone towers_.png}
+\end{center}
+    
+\end{frame}
+
+\begin{frame}{Health Impacts of Mobile Tower Radiation}
+\begin{columns}
+    \column{0.48\textwidth}
+    An assessment of the public perception associated with the health aspects of mobile tower proximity was conducted. The findings of the assessment are:\\
+    \begin{itemize}
+        \item \textbf{Yes:} Many responders assert a connection between their health conditions and the mobile towers near them.
+        \item \textbf{Not Sure:} Some respondents were uncertain about a connection between their health problems and tower radiation.
+    \end{itemize}
+    \column{0.48\textwidth}
+    This shows public worry over the possible health risks living or working close to mobile towers, especially addressing those manifesting headaches, sleep disruption, or other complaints.
+    \begin{block}{Cumulative Impact:}
+        Continuous exposure over years can overwhelm the body's defense mechanisms. It occurs through constant bombardment until the individual shows signs of chronic health issues.
+        
+    \end{block}
+
+    
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Result And Discussion}
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{Pics/Discussion.jpg}
+\end{center}
+    
+\end{frame}
+\begin{frame}{Result And Discussion}
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{Pics/Count of Are you aware of any mobile phone towers in your locality_.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Result And Discussion}
+\begin{columns}
+    \column{0.48\textwidth}
+    \begin{itemize}
+        \item \textbf{Awareness:} Some respondents indicated their awareness of mobile towers located near to them (Yes) and thus have observed or concerned about it to a certain degree.
+        \item \textbf{Uncertainty:} The Maybe responses imply that one group of individuals are uncertain about the presence of towers. It might be due to a lack of visible infrastructure or information.
+    \end{itemize}
+
+    
+    \column{0.48\textwidth}
+    \begin{itemize}
+        \item \textbf{Lack of Awareness:} The No responses indicate that the public is unaware of mobile towers in their locality.
+    \end{itemize}
+    The survey results reveal mixed awareness levels about the presence of mobile phone towers in respondents' localities. While some are aware, others are uncertain or unaware, indicating a need for improved communication and transparency regarding mobile tower installations to address public concerns and enhance awareness.
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Result And Discussion}
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{Pics/Count of Do you believe that radiation from mobile phone towers can affect human health_.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Result And Discussion}
+\begin{columns}
+    \column{0.48\textwidth}
+    \begin{itemize}
+        \item \textbf{Belief in Health Effects: } A small segment of the respondents is affirmative regarding the health problems associated with them with mobile tower radiation, which means they are worried about the health hazards resulting from exposure to matter from electromagnetic fields (or EMFs).
+        \item \textbf{Uncertainty:} The Not Sure responses indicate that significant numbers 
+    \end{itemize}
+
+    
+    \column{0.48\textwidth}
+    \hspace{0.5cm} of respondents are not really certain\\
+    \hspace{0.5cm} about the relationship of mobile towers\\
+    \hspace{0.5cm} with health issues. There is a need to\\
+    \hspace{0.5cm} spread awareness.
+    \vspace{0.2cm}
+    Some respondents believe that health problems relate directly to mobile tower radiation; while many are wavering on belief. These results show the public concern and ambiguity with a clear necessity for other research and better communication towards changing these perceptions.
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Result And Discussion}
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{Pics/Count of Have you experienced any health issues that you believe are related to radiation from mobile phone towers_.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Result And Discussion}
+\begin{columns}
+    \column{0.48\textwidth}
+    \begin{itemize}
+        \item \textbf{Health Fears:} Respondents (Yes) argue that they have been suffering from health issues caused by mobile tower radiation, suggesting that they are in fear of the effects brought by exposure to EMF\footnote{EMF: Electromagnetic Field}.
+        \item \textbf{Not Certain:} Some of them are uncertain (maybe) whether their health issues can be attributed to mobile tower radiation, which indicates a lack of concrete evidence or understanding.
+    \end{itemize}
+
+    
+    \column{0.48\textwidth}
+    \begin{itemize}
+        \item \textbf{No Health Issues:} Most respondents do not think that their health problems are related to the mobile towers (No), indicating that they may have not felt the impact at all or do not know about it.
+    \end{itemize}
+    The survey results reveal that some of the respondents think that the health issues are because of the mobile tower radiation while others are quite unsure of its effects; rather, they perceive it differently. This reflected the public concern and confusion surrounding the issue.
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Result And Discussion}
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{Pics/Count of Have you taken any measures to reduce your exposure to radiation from mobile phone towers_.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Result And Discussion}
+\begin{columns}
+    \column{0.48\textwidth}
+    \begin{itemize}
+        \item \textbf{Yes:} Some respondents have taken measures to reduce exposure, suggesting that they may be aware of the potential risks associated with radiation from mobile towers.
+        \item \textbf{No:} A good number of respondents have not taken any measures, which means that either they are unaware, they do not care, or they do not have any way to prevent exposure.
+    \end{itemize}
+
+    
+    \column{0.48\textwidth}
+    \begin{block}{Awareness Gap}
+    The findings bring to the fore a gap in public awareness or action concerning the hazards of EMF radiation and indicates a need for educative information and more cost-effective mitigation measures.
+    \end{block}
+    The survey indicates that while some respondents claim to have taken measures to reduce exposure to mobile tower radiation, many have yet to do so. There is thus an urgent need for well-balanced strategies on the reduction of exposure.
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Strategies to Address Mobile Tower Radiation Concerns}
+\begin{columns}
+    \column{0.48\textwidth}
+    \begin{itemize}
+        \item \textbf{Awareness Campaigns:} Emphasize the study into public awareness of risk and safety measures for EMF radiation from workshops, media, and information materials.
+        \item \textbf{Catching Strengthening:} Imposing tougher limits pertaining to EMF radiation from mobile towers and checking compliance is through regular monitoring.
+        \item \textbf{Research and Studies:} To Conduct More Science Research Establishing 
+
+    \end{itemize}
+
+    
+    \column{0.48\textwidth}
+    \hspace{0.6cm} Scientific Evidence for the Health Impact\\
+    \hspace{0.6cm} of EMF\\
+    \begin{itemize}
+        \item \textbf{Mitigation Strategies:} Simple measures are like shielding devices, optimal tower placement, and lowering the use of mobile devices beside towers.
+        \item \textbf{Community Engagement:} Involve local communities in making decisions on tower establishment as well as addressing their concerns proactively.
+    \end{itemize}
+
+    
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}{Coclusion}
+\begin{columns}
+    \column{0.48\textwidth}
+    Indicating a growing public concern about the possible health effect of mobile tower radiation, some persons attribute health effects to EMF radiation while others are not sure.\\
+    \vspace{0.1cm}
+    The lack of awareness and preventive measures among the bulk of the population further emphasizes the need for immediate action. Public education, stricter regulatory standards, and feasible mitigation measures need to
+
+    
+    \column{0.48\textwidth}
+      be employed to assuage these concerns. On the other hand, more scientific studies are needed to obtain unequivocal evidence concerning the health effects of EMF radiation.\\
+      \vspace{0.1cm}
+      Long-term collaboration among policymakers, researchers, and communities will help in the establishment of safe mobile tower infrastructure and, thus, the protection of public health.
+
+    
+\end{columns}
+    
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References}
+    \nocite{hardell2009epidemiological,leszczynski2002non,blackman1982effects,agarwal2006relationship,frey2020evolution,magras1997rf,simko2007cell,altamura1997influence,charles2003electromagnetic,world2007elf,abdel2007neurobehavioral,hocking1996cancer,moszczynski1999effect,pathak2003harmful,mcintosh2005numerical,kumar2006induced,polk1995handbook,kumar2011effect,gabriel1996dielectric,adair2002biological,stuchly2002biological,adey1981tissue,kumar2008interaction,ncrp1985biological,protection2002maximum}
+    \printbibliography % Instead of \bibliography
+
+\end{frame}
+
+\end{document}
